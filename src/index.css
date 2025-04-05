@@ -2,7 +2,7 @@
 
 main{
   background-color: rgb(255, 255, 255, 0.75);
-  background-image: url('../src/assets/images/campus-compass-background.jpeg');
+  /* background-image: url('../src/assets/images/campus-compass-background.jpeg'); */
   background-blend-mode:soft-light;
   background-size:cover;
   background-position: center;
