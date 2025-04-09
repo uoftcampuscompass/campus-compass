@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import Home from './Home.jsx';
 import Registration from './pages/Registration.jsx';
 import Login from './pages/Login.jsx';
+import Profile from './pages/Profile.jsx';
+import PrivateRoute from './pages/components/PrivateRoute.jsx';
 
 function App() {
   return (
@@ -14,6 +16,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/login" element={<Login />} />
+        <Route element={<PrivateRoute />}>
+          <Route path='/profile' element={<Profile />} />
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>
