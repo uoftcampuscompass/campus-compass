@@ -17,7 +17,7 @@ export default function home() {
           </div>
 
           <div>
-          {/* {
+          {
             currentUser ? 
               <Link to={'/create-new-todo'} className='text-sm sm:text-lg text-blue-700 font-bold hover:underline'>
                 Click here to create a new todo.
@@ -30,7 +30,7 @@ export default function home() {
                   Click here to register.
                 </Link>
               </div>
-          } */}
+          }
           </div>
         </div>
       </div>
