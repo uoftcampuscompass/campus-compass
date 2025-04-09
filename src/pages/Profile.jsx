@@ -169,42 +169,42 @@ export default function Profile() {
     }
   }
 
-  // const handleListingDelete = async(listingID) => {
-  //   try {
-  //       const userData = await fetch(`/api/user/listings/${currentUser._id}`);
-  //       const userDataJson = await userData.json();
-  //       const storage = getStorage();
+  const handleListingDelete = async(listingID) => {
+    try {
+        const userData = await fetch(`/api/user/listings/${currentUser._id}`);
+        const userDataJson = await userData.json();
+        const storage = getStorage();
 
-  //       const listingData = await fetch(`/api/listing/get/${listingID}`);
-  //       const listingDataJson = await listingData.json();
+        const listingData = await fetch(`/api/listing/get/${listingID}`);
+        const listingDataJson = await listingData.json();
         
-  //       for(let i=0;i<listingDataJson.imageUrls.length;i++){
-  //           const imageName = listingDataJson.imageUrls.at(i);
-  //           const desertRef = ref(storage, imageName);
-  //           deleteObject(desertRef).then(() => {
-  //               console.log("Image Removed Successfully")
-  //           }).catch((error) => {
-  //               console.log(error)
-  //           });
-  //       }
+        for(let i=0;i<listingDataJson.imageUrls.length;i++){
+            const imageName = listingDataJson.imageUrls.at(i);
+            const desertRef = ref(storage, imageName);
+            deleteObject(desertRef).then(() => {
+                console.log("Image Removed Successfully")
+            }).catch((error) => {
+                console.log(error)
+            });
+        }
 
-  //       const res = await fetch(`/api/listing/delete/${listingID}`, {
-  //           method:'DELETE'
-  //       });
+        const res = await fetch(`/api/listing/delete/${listingID}`, {
+            method:'DELETE'
+        });
 
-  //       const data = await res.json();
-  //       if(data.success === false) {
-  //           console.log(data.message);
-  //           return;
-  //       }
-  //       setUserListings( 
-  //           (prev) => prev.filter((listing) => listing._id !== listingID)
-  //       );
+        const data = await res.json();
+        if(data.success === false) {
+            console.log(data.message);
+            return;
+        }
+        setUserListings( 
+            (prev) => prev.filter((listing) => listing._id !== listingID)
+        );
 
-  //   } catch (error) {
-  //       console.log(error.message);
-  //   }
-  // }
+    } catch (error) {
+        console.log(error.message);
+    }
+  }
 
   const handleDeleteUser = async () => {
     try{
@@ -335,7 +335,7 @@ export default function Profile() {
                 <div className="bg-white shadow-md rounded-lg p-8">
                   <h2 className="text-xl font-semibold mb-4">Delete Profile</h2>
                   <p className="mb-1">Are you sure you want to delete your profile?</p>
-                  <p className="mb-6">All your listings (if any) will be deleted too.</p>
+                  <p className="mb-6">All your events, your profile picture, and all other data (if any) will be deleted too.</p>
                   <div className="flex justify-end">
                     <button className="bg-red-500 text-white px-4 py-2 rounded mr-4" onClick={handleDeleteUser}>Delete</button>
                     <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded" onClick={() => setIsOpen(false)}>Cancel</button>
