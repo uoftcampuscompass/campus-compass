@@ -52,6 +52,9 @@ export default function Header() {
                     <Link to={"/all-events"} className="border-b border-gray-400 uppercase" onClick={() => setIsNavOpen(false)} >
                       <li className='text-xl text-white'>All Events</li>
                     </Link>
+                    <Link to={"/my-events"} className="border-b border-gray-400 uppercase" onClick={() => setIsNavOpen(false)} >
+                      <li className='text-xl text-white'>My Events</li>
+                    </Link>
                     <Link to={"/profile"} className="border-b border-gray-400 uppercase" onClick={() => setIsNavOpen(false)} >
                       <li className='text-xl text-white'>Profile</li>
                     </Link>
@@ -92,6 +95,9 @@ export default function Header() {
                 </Link>
                 <Link to={"/all-todos"} className="border-b border-gray-400 uppercase">
                   <li className='text-white'>All Events</li>
+                </Link>
+                <Link to={"/my-events"} className="border-b border-gray-400 uppercase" onClick={() => setIsNavOpen(false)} >
+                  <li className='text-xl text-white'>My Events</li>
                 </Link>
                 <Link to={"/profile"} className="border-b border-gray-400 uppercase">
                   <li className='text-white'>Profile</li>
