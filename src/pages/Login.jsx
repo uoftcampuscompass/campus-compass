@@ -82,8 +82,8 @@ export default function Login() {
           <p>
             New User?
           </p>
-          <Link to={"/sign-up"}>
-            <span className='text-[rgb(7,57,106)]'>Sign Up Here</span>
+          <Link to={"/registration"}>
+            <span className='text-[rgb(7,57,106)]'>Register Here</span>
           </Link>
         </div>
       </div>
