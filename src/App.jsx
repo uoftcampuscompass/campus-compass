@@ -7,6 +7,7 @@ import Registration from './pages/Registration.jsx';
 import Login from './pages/Login.jsx';
 import Profile from './pages/Profile.jsx';
 import PrivateRoute from './pages/components/PrivateRoute.jsx';
+import CreateEvent from './pages/CreateEvent.jsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route element={<PrivateRoute />}>
           <Route path='/profile' element={<Profile />} />
+          <Route path='/create-new-event' element={<CreateEvent />} />
         </Route>
       </Routes>
       <Footer />

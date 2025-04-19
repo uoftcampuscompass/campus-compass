@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
 import authRoutes from './src/routes/authRoutes.js';
 import userRoutes from './src/routes/userRoutes.js';
+import eventRoutes from './src/routes/eventRoutes.js';
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ mongoose.connect(process.env.MongoDB).then(() => console.log('MongoDB connected'
 
 app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/events", eventRoutes);
 
 // app.get('/api', (req, res) => {
 //   res.json({ message: 'Backend working!' });

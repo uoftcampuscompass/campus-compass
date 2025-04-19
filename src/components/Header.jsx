@@ -90,10 +90,10 @@ export default function Header() {
                 <Link to='/about' className="border-b border-gray-400 uppercase">
                     <li className='text-white'>About</li>
                 </Link>
-                <Link to={"/create-new-todo"} className="border-b border-gray-400 uppercase">
+                <Link to={"/create-new-event"} className="border-b border-gray-400 uppercase">
                   <li className='text-white'>Create New Event</li>
                 </Link>
-                <Link to={"/all-todos"} className="border-b border-gray-400 uppercase">
+                <Link to={"/all-events"} className="border-b border-gray-400 uppercase">
                   <li className='text-white'>All Events</li>
                 </Link>
                 <Link to={"/my-events"} className="border-b border-gray-400 uppercase" onClick={() => setIsNavOpen(false)} >
