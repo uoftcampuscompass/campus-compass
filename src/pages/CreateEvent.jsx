@@ -86,7 +86,7 @@ export default function CreateTodo() {
     return (
         <main>
             <div className='py-4 px-4 max-w-6xl mx-auto'>
-                <h1 className='text-3xl font-semibold text-center my-7'>Create New Todo</h1>
+                <h1 className='text-3xl font-semibold text-center my-7'>Create New Event</h1>
 
                 <form onSubmit={handleSubmit} className='flex flex-col'>
                     <div className='flex flex-col md:flex-row gap-6 pb-10'>
@@ -110,7 +110,7 @@ export default function CreateTodo() {
                                                 const formattedStartDate = dayjs(e).format("D MMMM, YYYY");
                                                 setStartDate(formattedStartDate)
                                             }}  />
-                                            <Calendar className="absolute left-3 top-3 text-black" size={21} />
+                                            <Calendar className="absolute right-3 top-3 text-black" size={21} />
                                         </div>
                                     </div>
                                     
@@ -124,7 +124,7 @@ export default function CreateTodo() {
                                                 const formattedEndDate = dayjs(e).format("D MMMM, YYYY");
                                                 setEndDate(formattedEndDate)
                                             }} />
-                                            <Calendar className="absolute left-3 top-3 text-black" size={21} />
+                                            <Calendar className="absolute right-3 top-3 text-black" size={21} />
                                         </div>
                                     </div>
                                 </div>
@@ -143,7 +143,7 @@ export default function CreateTodo() {
                                                             <TextField {...params} /> 
                                                         )}
                                                     />
-                                                    <Clock className="absolute right-4 top-4 text-black" size={21} />
+                                                    <Clock className="absolute right-3 top-4.5 text-black" size={21} />
                                                 </div>
                                             </div>
                                         </LocalizationProvider>
@@ -180,7 +180,7 @@ export default function CreateTodo() {
                                                             <TextField {...params} /> 
                                                         )} onChange={(e) => setEndTime(dayjs(e).format("h:mm A"))}
                                                     />
-                                                    <Clock className="absolute right-4 top-4 text-black" size={21} />
+                                                    <Clock className="absolute right-3 top-4.5 text-black" size={21} />
                                                 </div>
                                             </div>
                                         </LocalizationProvider>
